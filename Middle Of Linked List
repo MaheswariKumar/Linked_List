@@ -1,0 +1,34 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+'''
+
+    class Node:
+        def __init__(self, data):
+            self.data = data
+            self.next = None
+
+'''
+
+def findMiddle(head):
+    t = head
+    c = 0
+    while t != None:
+        c += 1
+        t = t.next
+       
+    
+    mid = c // 2
+    
+    num = 0
+    
+    t = head
+    while num != mid:
+        t = t.next
+        num += 1
+    
+    return t
+              
+pass
