@@ -1,0 +1,20 @@
+# List Node Class
+class Node:
+    def __init__(self, data):
+
+        self.data = data
+        self.next = None
+
+
+def isPalindrome(head):
+    t = head
+    lst = []
+    while t:
+        lst.append(t.data)
+        t = t.next
+        
+    if lst == lst[::-1]:
+        return True
+    return False
+       
+pass
