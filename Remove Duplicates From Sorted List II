@@ -1,0 +1,25 @@
+from collections import Counter
+def solve(head):
+    lst = []
+    t1 = head
+    while t1:
+        lst.append(t1.data)
+        t1 = t1.next
+    
+    lst = Counter(lst)
+    ans = []
+    for key, value in lst.items():
+        if value == 1:
+            ans.append(key)
+        
+    c = 0
+    t2 = head
+    n = len(ans)
+    while c < n-1:
+        t2.data = ans[c]
+        t2 = t2.next
+        c += 1
+
+    t2.data = ans[-1]
+    t2.next = None
+    return head
