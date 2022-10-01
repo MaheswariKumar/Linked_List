@@ -1,0 +1,31 @@
+def solve(head):
+    if not head.next:
+        return head
+    t1 = head
+    lst = []
+    len = 0
+
+    while t1:
+        lst.append(t1.data)
+        t1 = t1.next
+        len += 1
+
+    last = lst[len//2:]
+    last = last[::-1]
+    c = 0
+    i = 0
+    j = 0
+    t2 = head
+
+    while c < len:
+        if c%2 != 0:
+            t2.data = last[i] 
+            i += 1 
+        else:
+            t2.data = lst[j]
+            j += 1
+        
+        t2 = t2.next
+        c += 1
+
+    return head
