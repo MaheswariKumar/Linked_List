@@ -17,7 +17,7 @@ def solve(head):
     j = 0
     t2 = head
 
-    while c < len:
+    while t2:
         if c%2 != 0:
             t2.data = last[i] 
             i += 1 
